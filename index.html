@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoreo de Ruido - Instituto Educativo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-volume-mute"></i>
+                <span>Monitoreo de Ruido</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="pages/registro.html">Registrar Medición</a></li>
+                <li><a href="pages/analisis.html">Análisis</a></li>
+                <li><a href="pages/reportes.html">Reportes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Sistema de Monitoreo Acústico Escolar</h1>
+                <p>Control y análisis de contaminación sonora en la institución</p>
+                <a href="pages/registro.html" class="btn btn-primary">Comenzar Medición</a>
+            </div>
+        </section>
+
+        <section class="dashboard">
+            <div class="container">
+                <h2>Indicadores Principales</h2>
+                <div class="indicators-grid">
+                    <div class="indicator-card">
+                        <div class="icon"><i class="fas fa-arrow-up"></i></div>
+                        <h3>Mayor Ruido</h3>
+                        <p class="value" id="maxRuido">-- dB</p>
+                        <small id="maxSalon">Cargando...</small>
+                    </div>
+                    <div class="indicator-card">
+                        <div class="icon"><i class="fas fa-arrow-down"></i></div>
+                        <h3>Menor Ruido</h3>
+                        <p class="value" id="minRuido">-- dB</p>
+                        <small id="minSalon">Cargando...</small>
+                    </div>
+                    <div class="indicator-card">
+                        <div class="icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Promedio General</h3>
+                        <p class="value" id="promedioRuido">-- dB</p>
+                        <small>Todas las mediciones</small>
+                    </div>
+                    <div class="indicator-card">
+                        <div class="icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <h3>Salones en Alerta</h3>
+                        <p class="value" id="salonesAlerta">0</p>
+                        <small>Ruido dañino (>70 dB)</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="maps-section">
+            <div class="container">
+                <h2>Mapa de Contaminación Acústica</h2>
+                <div class="maps-grid">
+                    <div class="map-card">
+                        <h3>Jornada Mañana</h3>
+                        <div class="heatmap" id="heatmapMañana"></div>
+                    </div>
+                    <div class="map-card">
+                        <h3>Jornada Tarde</h3>
+                        <div class="heatmap" id="heatmapTarde"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="alerts-section">
+            <div class="container">
+                <h2>Alertas y Recomendaciones</h2>
+                <div id="alertasContainer" class="alerts-container">
+                    <!-- Se cargará dinámicamente -->
+                </div>
+            </div>
+        </section>
+
+        <section class="investigative-section">
+            <div class="container">
+                <h2>Preguntas Investigativas</h2>
+                <div class="questions-grid">
+                    <div class="question-card">
+                        <h3>¿Cómo reducir el ruido en zonas de alerta?</h3>
+                        <p>Implementar paneles acústicos, establecer horarios de silencio y crear espacios de descanso tranquilo.</p>
+                    </div>
+                    <div class="question-card">
+                        <h3>¿Cómo reducir el ruido diario?</h3>
+                        <p>Campañas de sensibilización, regulación de actividades ruidosas y uso de materiales absorbentes.</p>
+                    </div>
+                    <div class="question-card">
+                        <h3>¿Impacto del ruido en estudiantes?</h3>
+                        <p>Afecta concentración, estrés, audición y desempeño académico a largo plazo.</p>
+                    </div>
+                    <div class="question-card">
+                        <h3>¿Zonas con mayor ruido?</h3>
+                        <p>Patio durante descanso, cafetería y pasillos son las áreas más críticas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistema de Monitoreo de Ruido. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
